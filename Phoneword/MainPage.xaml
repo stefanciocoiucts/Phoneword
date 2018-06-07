@@ -11,12 +11,24 @@
     <StackLayout VerticalOptions="FillAndExpand"
                  HorizontalOptions="FillAndExpand"
                  Orientation="Vertical"
-                 Spacing="15">
-      <Label Text="Enter a Phoneword:" />
-      <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
+                 Spacing="15"> <!--The position of the layout is set-->
+       
+      <Label Text="Enter a Phoneword:" /> <!-- A Label's created-->
+        <!--Creates a box where the user is able to input whatever the y want -->
+        <!--1-855-XAMARIN is a preset-->
+      <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" /> 
+        <!--When clicked, it launches the function of translating the input-->
       <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+        <!--When clicked, it launches the function of calling the translated input-->
+        <!--IsEnabled means that if the number is not translated, the function's not
+        available-->
       <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
+        <!--When clicked, it launches the function of popping a new page with a history
+        of all calls-->
+        <!-- IsEnabled means that if the call function hasn't been activated,
+        this function is not available-->
       <Button x:Name="callHistoryButton" Text="Call History" IsEnabled="false"
               Clicked="OnCallHistory"/>
+       <!--Above, buttons are created and assigned functions-->
     </StackLayout>
 </ContentPage>

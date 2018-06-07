@@ -10,10 +10,10 @@ namespace Core
                 return null;
 
             raw = raw.ToUpperInvariant();
-
+            //StringBuilder allows the user to expand the number of characters in a string
             var newNumber = new StringBuilder();
-            foreach (var c in raw)
-            {
+            foreach (var c in raw) //Creates a foreach loop (loops through each)
+            { //loops through each number to check if c is one of them
                 if (" -0123456789".Contains(c))
                     newNumber.Append(c);
                 else
@@ -33,7 +33,8 @@ namespace Core
         {
             return keyString.IndexOf(c) >= 0;
         }
-
+        //Splits the alphabet into the respective groups in which numbers
+        //are assigned to it
         static readonly string[] digits = {
             "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"
         };

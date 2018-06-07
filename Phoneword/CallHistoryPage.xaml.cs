@@ -9,7 +9,7 @@ namespace Phoneword
     {
         public CallHistoryPage()
         {
-            InitializeComponent();
+            InitializeComponent(); //Initialises previous
         }
     }
 }
